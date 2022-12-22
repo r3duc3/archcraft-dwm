@@ -10,9 +10,8 @@ license=('GPL3')
 options=(zipman)
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2' 
 		'archcraft-st' 'hsetroot'
-		'alacritty' 'thunar' 'geany'
+		'pcmanfm' 'geany'
 		'rofi' 'polybar' 'dunst'
-		'mpd' 'mpc'
 		'maim' 'xclip' 'viewnior' 'feh'
 		'ksuperkey' 
 		'betterlockscreen'
