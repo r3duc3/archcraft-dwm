@@ -38,7 +38,7 @@ wmname "LG3D"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 ## Add your autostart programs here --------------
-
+xfce4-clipman &
 ## -----------------------------------------------
 
 # Launch DWM
