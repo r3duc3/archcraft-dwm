@@ -205,7 +205,6 @@ static Key keys[] = {
 	
 	// Rofi Menus -----------
     { ALTKEY, 					XK_F1, 						spawn, {.v = rofi_cmd } },
-    { MODKEY, 					XK_m, 						spawn, {.v = rofi_mpdcmd } },
     { MODKEY, 					XK_n, 						spawn, {.v = rofi_nmcmd } },
     { MODKEY, 					XK_r, 						spawn, {.v = rofi_rootcmd } },
     { MODKEY, 					XK_x, 						spawn, {.v = rofi_powercmd } },
@@ -313,7 +312,7 @@ static Button buttons[] = {
     { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
     { ClkLtSymbol,          0,              Button3,        spawn,     		{.v = rofi_layoutcmd } },
     { ClkWinTitle,          0,              Button2,        zoom,           {0} },
-    { ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+    { ClkStatusText,        0,              Button2,        spawn,          {.v = stcmd } },
 
 	{ ClkClientWin,         MODKEY,         Button1,        moveorplace,    {.i = 0} },
     { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
