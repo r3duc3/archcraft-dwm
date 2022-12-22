@@ -5,7 +5,7 @@ sudo pacman -S --needed --disable-download-timeout libx11 libxinerama libxft fre
 
 echo 'install some package'
 sudo mkdir -p /usr/share/archcraft
-sudo cp -rf archcraft/shared /usr/share/archcraft/dwm
+sudo cp -rf archcraft-dwm/shared /usr/share/archcraft/dwm
 sudo chmod +x /usr/share/archcraft/dwm/bin/*
 sudo chmod +x /usr/share/archcraft/dwm/rofi/bin/*
 
@@ -33,4 +33,4 @@ cd ..
 echo 'install dwm'
 cd archcraft-dwm/source
 make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 FREETYPEINC=/usr/include/freetype2
-sudo make PREFIX=/usr install
+sudo ake PREFIX=/usr install
