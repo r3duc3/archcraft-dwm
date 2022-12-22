@@ -5,7 +5,7 @@
 ## Autostart Programs
 
 # Kill already running process
-_ps=(picom dunst ksuperkey mpd xfce-polkit xfce4-power-manager)
+_ps=(picom dunst ksuperkey xfce-polkit xfce4-power-manager xfce4-clipman)
 for _prs in "${_ps[@]}"; do
 	if [[ `pidof ${_prs}` ]]; then
 		killall -9 ${_prs}
@@ -23,10 +23,6 @@ xfce4-power-manager &
 
 # Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
-
-# Restore wallpaper
-hsetroot -cover /usr/share/archcraft/dwm/wallpapers/default.png
 
 # Lauch dwmbar
 /usr/share/archcraft/dwm/bin/dwmbar.sh &
@@ -35,10 +31,7 @@ hsetroot -cover /usr/share/archcraft/dwm/wallpapers/default.png
 /usr/share/archcraft/dwm/bin/dwmdunst.sh
 
 # Lauch compositor
-/usr/share/archcraft/dwm/bin/dwmcomp.sh
-
-# Start mpd
-exec mpd &
+#/usr/share/archcraft/dwm/bin/dwmcomp.sh
 
 # Fix Java problems
 wmname "LG3D"
