@@ -14,6 +14,8 @@ cp -rf archcraft/shared /usr/share/archcraft/dwm
 chmod +x /usr/share/archcraft/dwm/bin/*
 chmod +x /usr/share/archcraft/dwm/rofi/bin/*
 
+git clone https://github.com/archcraft-os/archcraft-packages.git
+
 cd archcraft-packages/
 for x in 'dunst-icons/' '/fonts/' 'scripts'; do
 	cd archcraft-$x;
