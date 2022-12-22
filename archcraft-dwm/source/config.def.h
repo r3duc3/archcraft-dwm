@@ -85,6 +85,7 @@ static const Rule rules[] = {
 	{ "Pcmanfm",  			NULL,       NULL,       1 << 2,    	  0,           0,           -1 },
     { "code-oss",           NULL,       NULL,       1 << 3,       0,           0,           -1 },
     { "Pamac-manager",      NULL,       NULL,       1 << 7,       1,           1,           -1 },
+    { "stfloat"             NULL,       NULL,       0,            1,           1,           -1 },
     { "Viewnior",  			NULL,       NULL,       0,       	  1,           1,           -1 },
 	{ "Yad",  				NULL,       NULL,       0,       	  1,           1,           -1 },
 	{ "feh",  				NULL,       NULL,       0,       	  1,           1,           -1 },
@@ -141,8 +142,7 @@ static const char *dmenucmd[]  			= { "dmenu", NULL };
 
 /* Launch Apps */
 static const char *stcmd[]  			= { "st", NULL };
-static const char *termcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmterm.sh", NULL };
-static const char *floatterm[]  		= { "/usr/share/archcraft/dwm/bin/dwmterm.sh", "--float", NULL };
+static const char *stfloat[]            = { "st -T 'stfloat' -g 85x25+550+300", NULL };
 static const char *fmcmd[]    			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "--file", NULL };
 static const char *editcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "--editor", NULL };
 static const char *webcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "--web", NULL };
@@ -151,7 +151,6 @@ static const char *webcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "
 static const char *rofi_cmd[] 			= { "/usr/share/archcraft/dwm/rofi/bin/launcher", NULL };
 static const char *rofi_rootcmd[] 		= { "/usr/share/archcraft/dwm/rofi/bin/asroot", NULL };
 static const char *rofi_layoutcmd[] 	= { "/usr/share/archcraft/dwm/rofi/bin/layouts", NULL };
-static const char *rofi_mpdcmd[] 		= { "/usr/share/archcraft/dwm/rofi/bin/mpd", NULL };
 static const char *rofi_nmcmd[]    		= { "/usr/share/archcraft/dwm/rofi/bin/network_menu", NULL };
 static const char *rofi_powercmd[]  	= { "/usr/share/archcraft/dwm/rofi/bin/powermenu", NULL };
 static const char *rofi_shotcmd[]  		= { "/usr/share/archcraft/dwm/rofi/bin/screenshot", NULL };
@@ -197,8 +196,7 @@ static Key keys[] = {
 
 	// Terminals -----------
     { MODKEY, 					XK_Return, 					spawn, {.v = stcmd } },
-    { MODKEY|ShiftMask, 		XK_Return, 					spawn, {.v = floatterm } },
-    { MODKEY|ControlMask, 		XK_Return, 					spawn, {.v = termcmd } },
+    { MODKEY|ShiftMask, 		XK_Return, 					spawn, {.v = stfloat } },
 
 	// Launch Apps -----------
     { MODKEY|ShiftMask, 		XK_f, 						spawn, {.v = fmcmd } },
