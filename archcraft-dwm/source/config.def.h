@@ -143,9 +143,9 @@ static const char *dmenucmd[]  			= { "dmenu", NULL };
 /* Launch Apps */
 static const char *stcmd[]  			= { "st", NULL };
 static const char *stfloat[]            = { "st -T 'stfloat' -g 85x25+550+300", NULL };
-static const char *fmcmd[]    			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "--file", NULL };
-static const char *editcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "--editor", NULL };
-static const char *webcmd[]  			= { "/usr/share/archcraft/dwm/bin/dwmapps.sh", "--web", NULL };
+static const char *fmcmd[]    			= { "pcmanfm", NULL };
+static const char *editcmd[]  			= { "geany", NULL };
+static const char *webcmd[]  			= { "firefox", NULL };
 
 /* Rofi Menus */
 static const char *rofi_cmd[] 			= { "/usr/share/archcraft/dwm/rofi/bin/launcher", NULL };
